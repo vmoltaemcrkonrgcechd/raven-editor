@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { computed, PropType } from "vue";
 import { iColumn } from "@/types";
+import Utils from "@/utils";
 
 const props = defineProps({
   column: {
@@ -10,11 +11,7 @@ const props = defineProps({
 });
 
 const getColumnNameOrDisplayName = computed<string>(() => {
-  if (props.column.displayName.length !== 0) {
-    return props.column.displayName;
-  }
-
-  return props.column.columnName;
+  return Utils.getColumnNameOrDisplayName(props.column);
 });
 </script>
 

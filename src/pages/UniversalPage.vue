@@ -32,7 +32,7 @@ const actionHandler = (action: iAction): void => {
 </script>
 
 <template>
-  <div class="grid grid-cols-2 gap-4 p-8">
+  <div class="grid grid-cols-2 gap-4 p-8 items-start">
     <UniversalComponent
       v-for="node in indexStore.nodes"
       :key="node.id"

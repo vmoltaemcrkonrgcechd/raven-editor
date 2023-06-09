@@ -3,6 +3,7 @@ import { computed, onBeforeMount, PropType, Ref } from "vue";
 import { iAction, iNode, nodeTypes } from "@/types";
 import { useIndexStore } from "@/stores";
 import DataTable from "@/components/dataTable/DataTable.vue";
+import UniversalForm from "@/components/universalForm/UniversalForm.vue";
 
 const props = defineProps({
   universalComponent: {
@@ -31,6 +32,9 @@ const getComponent = computed<any>(() => {
   switch (props.universalComponent.type) {
     case nodeTypes.TABLE:
       return DataTable;
+
+    case nodeTypes.FORM:
+      return UniversalForm;
 
     default:
       return null;

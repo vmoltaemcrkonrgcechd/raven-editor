@@ -18,6 +18,31 @@
         {
           "name": "SATORU",
           "price": 201.5
+        },
+        {
+          "name": "ZIN",
+          "price": 1201.5
+        }
+      ]
+    },
+    "children": []
+  },
+  {
+    "id": 2,
+    "type": 1,
+    "tableName": "products",
+    "data": {
+      "type": 0,
+      "fields": [
+        {
+          "type": 0,
+          "columnName": "name",
+          "displayName": "название"
+        },
+        {
+          "type": 0,
+          "columnName": "price",
+          "displayName": "цена"
         }
       ]
     },
