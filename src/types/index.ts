@@ -1,9 +1,13 @@
+export enum nodeTypes {
+  TABLE,
+}
+
 export interface iNode<T = tData> {
   id: number;
   type: number;
   tableName: string;
   data: T;
-  children: iNode<tData>[];
+  children: iNode[];
 }
 
 export type tData = iTableData;

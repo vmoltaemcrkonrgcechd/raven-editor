@@ -1,11 +1,25 @@
 [
   {
     "id": 1,
-    "type": 1,
-    "tableName": "",
+    "type": 0,
+    "tableName": "products",
     "data": {
-      "columns": [],
-      "rows": []
+      "columns": [
+        {
+          "columnName": "name",
+          "displayName": "название"
+        },
+        {
+          "columnName": "price",
+          "displayName": "цена"
+        }
+      ],
+      "rows": [
+        {
+          "name": "SATORU",
+          "price": 201.5
+        }
+      ]
     },
     "children": []
   }

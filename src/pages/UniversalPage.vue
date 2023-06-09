@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { onMounted } from "vue";
 import { useIndexStore } from "@/stores";
-import UniversalComponent from "@/components/UniversalComponent.vue";
+import UniversalComponent from "@/components/universalComponent/UniversalComponent.vue";
 import { actionTypes, iAction } from "@/types";
 
 const indexStore = useIndexStore();
@@ -32,7 +32,7 @@ const actionHandler = (action: iAction): void => {
 </script>
 
 <template>
-  <div>
+  <div class="grid grid-cols-2 gap-4 p-8">
     <UniversalComponent
       v-for="node in indexStore.nodes"
       :key="node.id"
