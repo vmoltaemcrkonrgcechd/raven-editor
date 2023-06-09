@@ -1,17 +1,20 @@
 <script lang="ts" setup>
 import { computed, onBeforeMount, PropType, Ref } from "vue";
-import { iNode, tData } from "@/types";
+import { iNode } from "@/types";
 import { useIndexStore } from "@/stores";
+import { actionTypes } from "@/types";
 
 const props = defineProps({
   universalComponent: {
-    type: Object as PropType<iNode<tData>>,
+    type: Object as PropType<iNode>,
   },
 });
 
+const emit = defineEmits(["action"]);
+
 const indexStore = useIndexStore();
 
-let reactiveNode: Ref<iNode<tData>>;
+let reactiveNode: Ref<iNode>;
 
 onBeforeMount(() => {
   if (props.universalComponent) {

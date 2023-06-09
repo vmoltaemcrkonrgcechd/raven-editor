@@ -1,4 +1,4 @@
-export interface iNode<T> {
+export interface iNode<T = tData> {
   id: number;
   type: number;
   tableName: string;
@@ -16,4 +16,23 @@ export interface iTableData {
 export interface iColumn {
   columnName: string;
   displayName: string;
+}
+
+export enum actionTypes {
+  POST,
+  PATCH,
+  DELETE,
+}
+
+export interface iAction<T = tPayload> {
+  type: number;
+  tableName: string;
+  successHandler?: () => void;
+  payload: T;
+}
+
+export type tPayload = iPostPayload;
+
+export interface iPostPayload {
+  data: { [key: string]: any };
 }
