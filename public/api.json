@@ -28,24 +28,35 @@
     "children": []
   },
   {
-    "id": 2,
-    "type": 1,
-    "tableName": "products",
+    "id": 3,
+    "type": 2,
+    "tableName": "",
     "data": {
       "type": 0,
-      "fields": [
-        {
-          "type": 0,
-          "columnName": "name",
-          "displayName": "название"
-        },
-        {
-          "type": 0,
-          "columnName": "price",
-          "displayName": "цена"
-        }
-      ]
+      "label": "добавить"
     },
-    "children": []
+    "children": [
+      {
+        "id": 2,
+        "type": 1,
+        "tableName": "products",
+        "data": {
+          "type": 0,
+          "fields": [
+            {
+              "type": 0,
+              "columnName": "name",
+              "displayName": "название"
+            },
+            {
+              "type": 0,
+              "columnName": "price",
+              "displayName": "цена"
+            }
+          ]
+        },
+        "children": []
+      }
+    ]
   }
 ]

@@ -4,6 +4,7 @@ import { iAction, iNode, nodeTypes } from "@/types";
 import { useIndexStore } from "@/stores";
 import DataTable from "@/components/dataTable/DataTable.vue";
 import UniversalForm from "@/components/universalForm/UniversalForm.vue";
+import UniversalButton from "@/components/universalButton/UniversalButton.vue";
 
 const props = defineProps({
   universalComponent: {
@@ -35,6 +36,9 @@ const getComponent = computed<any>(() => {
 
     case nodeTypes.FORM:
       return UniversalForm;
+
+    case nodeTypes.BUTTON:
+      return UniversalButton;
 
     default:
       return null;

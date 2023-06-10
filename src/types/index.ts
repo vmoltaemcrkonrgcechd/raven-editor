@@ -1,6 +1,7 @@
 export enum nodeTypes {
   TABLE,
   FORM,
+  BUTTON,
 }
 
 export interface iNode<T = tData> {
@@ -11,7 +12,7 @@ export interface iNode<T = tData> {
   children: iNode[];
 }
 
-export type tData = iTableData | iFormData;
+export type tData = iTableData | iFormData | iButtonData;
 
 export interface iTableData {
   columns: iColumn[];
@@ -36,6 +37,15 @@ export interface iFormField {
   type: number;
   columnName: string;
   displayName: string;
+}
+
+export enum buttonTypes {
+  DIALOG,
+}
+
+export interface iButtonData {
+  type: number;
+  label: string;
 }
 
 export enum actionTypes {

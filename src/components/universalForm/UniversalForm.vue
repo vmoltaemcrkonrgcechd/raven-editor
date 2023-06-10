@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { PropType } from "vue/dist/vue";
-import { iFormData, iNode, actionTypes, iAction, iPostPayload } from "@/types";
+import { iFormData, iNode, actionTypes } from "@/types";
 import UniversalFormField from "@/components/universalForm/UniversalFormField.vue";
 import Button from "@/components/universalButton/Button.vue";
 
