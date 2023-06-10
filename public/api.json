@@ -25,7 +25,41 @@
         }
       ]
     },
-    "children": []
+    "children": [
+      {
+        "id": 5,
+        "type": 2,
+        "tableName": "",
+        "data": {
+          "type": 0,
+          "label": "редактировать",
+          "secondary": true
+        },
+        "children": [
+          {
+            "id": 6,
+            "type": 1,
+            "tableName": "products",
+            "data": {
+              "type": 0,
+              "fields": [
+                {
+                  "type": 0,
+                  "columnName": "name",
+                  "displayName": "название"
+                },
+                {
+                  "type": 0,
+                  "columnName": "price",
+                  "displayName": "цена"
+                }
+              ]
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 3,

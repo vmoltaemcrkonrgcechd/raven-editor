@@ -31,7 +31,11 @@ const actionHandler = (action: iAction): void => {
 </script>
 
 <template>
-  <Button :label="universalButton.data.label" @click="modelValue = true" />
+  <Button
+    :label="universalButton.data.label"
+    :secondary="universalButton.data.secondary"
+    @click="modelValue = true"
+  />
 
   <Dialog v-model="modelValue">
     <UniversalComponent

@@ -23,7 +23,7 @@ const outsideClickHandler = (event: Event) => {
   <teleport to="body">
     <div
       v-if="modelValue"
-      class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-slate-900/75"
+      class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-slate-900/75 z-50"
       @click="outsideClickHandler"
     >
       <div ref="body">

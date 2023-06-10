@@ -15,10 +15,9 @@ const props = defineProps({
 
 const buttonClass = computed(() => {
   return {
-    "rounded-md": true,
-    "bg-inherit hover:bg-blue-50": props.secondary,
-    "bg-blue-900 hover:bg-blue-800 uppercase py-1 px-3 text-white font-medium":
-      !props.secondary,
+    "rounded-md uppercase py-1 px-3 font-medium": true,
+    "bg-inherit hover:bg-blue-50 rounded-none": props.secondary,
+    "bg-blue-900 hover:bg-blue-800 text-white": !props.secondary,
   };
 });
 </script>

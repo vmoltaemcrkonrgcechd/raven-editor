@@ -46,6 +46,7 @@ export enum buttonTypes {
 export interface iButtonData {
   type: number;
   label: string;
+  secondary: boolean;
 }
 
 export enum actionTypes {
