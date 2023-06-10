@@ -1,14 +1,38 @@
 <script lang="ts" setup>
 import { PropType } from "vue/dist/vue";
-import { iFormData, iNode } from "@/types";
+import { iFormData, iNode, actionTypes, iAction, iPostPayload } from "@/types";
 import UniversalFormField from "@/components/universalForm/UniversalFormField.vue";
+import Button from "@/components/universalButton/Button.vue";
 
-defineProps({
+const props = defineProps({
   universalComponent: {
     type: Object as PropType<iNode<iFormData>>,
     required: true,
   },
 });
+
+const emit = defineEmits(["action"]);
+
+type tForm = { [key: string]: any };
+
+let form: tForm = {};
+
+const changeHandler = (field: tForm) => {
+  form = { ...form, ...field };
+};
+
+const clickHandler = () => {
+  switch (props.universalComponent.data.type) {
+    case actionTypes.POST:
+      emit("action", {
+        type: actionTypes.POST,
+        tableName: props.universalComponent.tableName,
+        payload: {
+          data: form,
+        },
+      });
+  }
+};
 </script>
 
 <template>
@@ -19,6 +43,9 @@ defineProps({
     <UniversalFormField
       v-for="field in universalComponent.data.fields"
       :field="field"
+      @change="changeHandler"
     />
+
+    <Button class="col-span-2" label="Подтвердить" @click="clickHandler" />
   </form>
 </template>

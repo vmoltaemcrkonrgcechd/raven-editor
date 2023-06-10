@@ -34,10 +34,9 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <template v-if="field.type === fieldTypes.INPUT_TEXT">
-    <InputText
-      v-model="modelValue"
-      :label="Utils.getColumnNameOrDisplayName(field)"
-    />
-  </template>
+  <InputText
+    v-if="field.type === fieldTypes.INPUT_TEXT"
+    v-model="modelValue"
+    :label="Utils.getColumnNameOrDisplayName(field)"
+  />
 </template>
