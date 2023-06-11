@@ -56,6 +56,7 @@ const actionHandler = (action: iAction): void => {
             <Universal
               v-for="child in universalComponent.children"
               :universal-component="child"
+              :row="row"
               @action="actionHandler"
             />
           </MenuButton>

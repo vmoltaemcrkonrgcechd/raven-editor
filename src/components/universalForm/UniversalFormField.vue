@@ -11,6 +11,11 @@ const props = defineProps({
     type: Object as PropType<iFormField>,
     required: true,
   },
+
+  row: {
+    type: Object as PropType<{ [key: string]: any }>,
+    default: null,
+  },
 });
 
 const emit = defineEmits(["change"]);
@@ -23,6 +28,10 @@ onBeforeMount(() => {
 
     default:
       return;
+  }
+
+  if (props.row && props.row[props.field.columnName] !== undefined) {
+    modelValue.value = props.row[props.field.columnName];
   }
 
   watch(modelValue, (newValue: any) => {

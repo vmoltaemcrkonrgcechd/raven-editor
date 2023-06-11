@@ -41,7 +41,8 @@
             "type": 1,
             "tableName": "products",
             "data": {
-              "type": 0,
+              "type": 1,
+              "by": "id",
               "fields": [
                 {
                   "type": 0,

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, onBeforeMount, PropType, Ref } from "vue";
+import { computed, onBeforeMount, PropType, ref, Ref } from "vue";
 import { iAction, iNode, nodeTypes } from "@/types";
 import { useIndexStore } from "@/stores";
 import DataTable from "@/components/dataTable/DataTable.vue";
@@ -10,6 +10,11 @@ const props = defineProps({
   universalComponent: {
     type: Object as PropType<iNode>,
     required: true,
+  },
+
+  row: {
+    type: Object as PropType<{ [key: string]: any }>,
+    default: null,
   },
 });
 
@@ -54,6 +59,7 @@ const actionHandler = (action: iAction): void => {
   <component
     :is="getComponent"
     :universal-component="getData"
+    :row="row"
     @action="actionHandler"
   />
 </template>

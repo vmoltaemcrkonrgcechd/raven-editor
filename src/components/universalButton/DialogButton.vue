@@ -10,6 +10,11 @@ defineProps({
     type: Object as PropType<iNode<iButtonData>>,
     required: true,
   },
+
+  row: {
+    type: Object as PropType<{ [key: string]: any }>,
+    default: null,
+  },
 });
 
 const emit = defineEmits(["action"]);
@@ -42,6 +47,7 @@ const actionHandler = (action: iAction): void => {
       v-for="child in universalButton.children"
       :universal-component="child"
       @action="actionHandler"
+      :row="row"
     />
   </Dialog>
 </template>

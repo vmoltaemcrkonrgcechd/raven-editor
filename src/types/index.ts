@@ -27,6 +27,7 @@ export interface iColumn {
 export interface iFormData {
   type: number;
   fields: iFormField[];
+  by?: string;
 }
 
 export enum fieldTypes {
@@ -66,4 +67,9 @@ export type tPayload = iPostPayload;
 
 export interface iPostPayload {
   data: { [key: string]: any };
+}
+
+export interface iPatchPayload {
+  data: { [key: string]: any };
+  by: string;
 }

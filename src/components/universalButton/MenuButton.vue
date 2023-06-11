@@ -1,13 +1,14 @@
 <script lang="ts" setup>
 import Button from "@/components/universalButton/Button.vue";
 import { ref } from "vue";
+import MoreVert from "@/icons/MoreVert.vue";
 
 const modelValue = ref<boolean>(false);
 </script>
 
 <template>
   <div class="relative w-full h-full flex items-center justify-center">
-    <Button label="|" @click="modelValue = !modelValue" />
+    <Button :icon="MoreVert" @click="modelValue = !modelValue" />
 
     <div
       v-if="modelValue"
